@@ -1,0 +1,41 @@
+Exécutez l'installateur MSYS2 :
+Suivez les instructions d'installation. Laissez l'emplacement par défaut (C:\msys64).
+
+Ouvrez le terminal MSYS2 (MSYS2 MSYS) :
+Une fois l'installation de MSYS2 terminée, cherchez "MSYS2 MSYS" dans votre menu Démarrer et lancez-le.
+
+Mettez à jour le système de paquets (important) :
+
+Bash
+
+pacman -Syu
+Si le terminal vous demande de le fermer et de le relancer, faites-le et exécutez la commande pacman -Syu une seconde fois.
+
+Installez GCC (la toolchain MinGW-w64) :
+C'est cette commande qui va télécharger et installer le compilateur gcc.exe prêt à l'emploi.
+
+Bash
+
+pacman -S --needed base-devel mingw-w64-x86_64-toolchain
+Quand il vous demande de sélectionner des paquets, appuyez sur Entrée pour sélectionner tous les paquets par défaut. Tapez y et Entrée pour confirmer l'installation.
+
+Ajoutez MinGW-w64 au PATH de Windows :
+Maintenant, le compilateur sera installé dans C:\msys64\mingw64\bin. C'est ce chemin que vous devez ajouter à la variable d'environnement Path de Windows.
+
+Cherchez "Modifier les variables d'environnement système" dans la barre de recherche Windows.
+
+Cliquez sur "Variables d'environnement...".
+
+Dans "Variables système", sélectionnez Path, puis "Modifier...".
+
+Cliquez sur "Nouveau" et ajoutez C:\msys64\mingw64\bin.
+
+Validez avec OK.
+
+Vérifiez l'installation :
+Ouvrez une nouvelle invite de commande (CMD) ou PowerShell et tapez :
+
+Bash
+
+gcc --version
+Vous devriez maintenant voir les informations de version de GCC.
