@@ -80,7 +80,9 @@ void afficher_menu() {
     printf("5. Modifier une ligne\n");
     printf("6. Sauvegarder\n");
     printf("7. Quitter\n");
+    printf("-------------\n");
     printf("Votre choix : ");
+
 }
 
 void afficher_contenu(char **lignes, int nb_lignes) {
