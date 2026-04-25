@@ -81,6 +81,7 @@ void afficher_menu() {
     printf("6. Sauvegarder\n");
     printf("7. Quitter\n");
     printf("-------------\n");
+    printf("Votre choix est important pour la suite du programme, choisissez avec soin !\n");
     printf("Votre choix : ");
 
 }
